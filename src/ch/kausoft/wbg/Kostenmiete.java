@@ -40,8 +40,9 @@ public class Kostenmiete {
 
    private void listWohnungTilgung() {
       Wohnung[] woh = datenSpeicher.getAllWohnung();
+      System.out.println("1--------------------------");
       for (int i = 0; i < woh.length; i++) {
-         System.out.println();
+         System.out.println("1.1--------------------------");
          woh[i].list();
          Investition[] inv = datenSpeicher.getAllInvestition();
          for (int j = 0; j < inv.length; j++) {
@@ -59,6 +60,7 @@ public class Kostenmiete {
    }
 
    private void tilgungsplanRechnen() {
+      System.out.println("tilgungsplanRechnen() --------------------------");
       Investition[] inv = datenSpeicher.getAllInvestition();
       for (int i = 0; i < inv.length; i++) {
          Investition investition = inv[i];

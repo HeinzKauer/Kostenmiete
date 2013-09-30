@@ -14,8 +14,9 @@ public class DataImporter {
 
    public DatenSpeicher load() {
 
-      String name = "C:\\eclipse2013\\Workspaces\\Kostenmiete\\Kostenmiete\\src\\ch\\kausoft\\wbg\\daten\\InputDaten.csv";
-      File f = new File(name);
+      String name = "C:\\eclipse2013\\git\\kostenmiete\\src\\ch\\kausoft\\wbg\\daten\\InputDaten.csv";
+//      String name = "..//InputDaten.csv";
+      File f = new File(name);     
       String zeile;
       FileInputStream fis;
       InputStreamReader isr = null;

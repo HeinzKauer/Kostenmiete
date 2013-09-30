@@ -80,12 +80,40 @@ public class Tilgung {
    }
 
    public void consolOutDetail(Investition invest2, double wohnungsanteil) {
-      System.out.println(invest2.bezeichnung + " Betrag " + betrag
-            * wohnungsanteil / 100 //
-            + " Miete / Jahr " //
-            + ((zinsBetrag + amortisationsBetrag) * wohnungsanteil / 100) //
-            + " Miete / Monat " //
-            + ((zinsBetrag + amortisationsBetrag) / 12 * wohnungsanteil / 100));
+      boolean gerundet = true;
+      if (gerundet) {
+         System.out
+               .println(invest2.bezeichnung
+                     + " Betrag " //
+                     + (int) (betrag * wohnungsanteil / 100)//
+                     + " (" //
+                     + (int) (zinsBetrag * wohnungsanteil / 100)//
+                     + "," //
+                     + (int) (amortisationsBetrag * wohnungsanteil / 100) //
+                     + ") Miete / Jahr " //
+                     + ((int) ((zinsBetrag + amortisationsBetrag) * wohnungsanteil) / 100) //
+                     + " Monat " //
+                     + ((int) ((zinsBetrag + amortisationsBetrag) / 12 * wohnungsanteil) / 100));
+      } else {
+         System.out
+               .println(invest2.bezeichnung
+                     + " Betrag "
+                     + betrag
+                     * wohnungsanteil
+                     / 100 //
+                     + " (" //
+                     + (int) (zinsBetrag * wohnungsanteil / 100)//
+                     + "," //
+                     + (int) (amortisationsBetrag * wohnungsanteil / 100) //
+                     + ") Miete / Jahr " //
+                     + (zinsBetrag + amortisationsBetrag)
+                     * wohnungsanteil
+                     / 100 //
+                     + " Monat " //
+                     + (zinsBetrag + amortisationsBetrag) / 12 * wohnungsanteil
+                     / 100);
+
+      }
    }
 
    private int amortisationsjahr() {
@@ -165,6 +193,8 @@ public class Tilgung {
    }
 
    public void listConsoloutput() {
+      System.out.println("co --------------------------");
+
       Tilgung l = this;
       double zins = 0d;
       do {
