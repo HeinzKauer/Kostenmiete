@@ -2,6 +2,9 @@ package ch.kausoft.wbg.daten;
 
 public class Tilgung {
 
+/**
+* eine Investition wird getilgt 
+*/
    Investition invest;
    Tilgung tilgungBefore;
    Tilgung tilgungNext;
@@ -43,7 +46,7 @@ public class Tilgung {
     * @param jaehrlicherMietzinsbeitrag
     * @return restschuld
     */
-   public double rechnenJährlicheBeitraege(double jaehrlicherMietzinsbeitrag) {
+   public double rechnenJï¿½hrlicheBeitraege(double jaehrlicherMietzinsbeitrag) {
       Zinssatz kz = invest.getKapitalZins(this.jahr);
       zinsBetrag = betrag * kz.zins[zinsCase] / 100;
       amortisationsBetrag = jaehrlicherMietzinsbeitrag - zinsBetrag;
@@ -66,7 +69,7 @@ public class Tilgung {
             + ((invest.lebensdauerInJahre
                   - (this.jahr - invest.aktivierungsjahr) > 0) ? this.jahr
                   - invest.aktivierungsjahr + 1
-                  : "Überschreitung Amortisierungsdauer")
+                  : "ï¿½berschreitung Amortisierungsdauer")
 
       );
 
@@ -182,7 +185,7 @@ public class Tilgung {
       Tilgung t = this;
       double resrschuld;
       do {
-         resrschuld = t.rechnenJährlicheBeitraege(beitrag);
+         resrschuld = t.rechnenJï¿½hrlicheBeitraege(beitrag);
          t = new Tilgung(t);
          if (t.betrag < t.amortisationsBetrag) {
 
