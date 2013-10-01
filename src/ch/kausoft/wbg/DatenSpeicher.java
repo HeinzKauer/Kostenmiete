@@ -9,6 +9,9 @@ import ch.kausoft.wbg.daten.Wohnung;
 
 public class DatenSpeicher {
 
+	/**
+	 * 
+	 */
    private HashMap<String, Kapital> kapital = new HashMap<String, Kapital>();
    private HashMap<String, Investition> invest = new HashMap<String, Investition>();
    public Wohnung[] wohnungen = new Wohnung[14];
