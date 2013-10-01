@@ -46,7 +46,7 @@ public class Tilgung {
     * @param jaehrlicherMietzinsbeitrag
     * @return restschuld
     */
-   public double rechnenJ�hrlicheBeitraege(double jaehrlicherMietzinsbeitrag) {
+   public double rechnenJaehrlicheBeitraege(double jaehrlicherMietzinsbeitrag) {
       Zinssatz kz = invest.getKapitalZins(this.jahr);
       zinsBetrag = betrag * kz.zins[zinsCase] / 100;
       amortisationsBetrag = jaehrlicherMietzinsbeitrag - zinsBetrag;
@@ -185,7 +185,7 @@ public class Tilgung {
       Tilgung t = this;
       double resrschuld;
       do {
-         resrschuld = t.rechnenJ�hrlicheBeitraege(beitrag);
+         resrschuld = t.rechnenJaehrlicheBeitraege(beitrag);
          t = new Tilgung(t);
          if (t.betrag < t.amortisationsBetrag) {
 
