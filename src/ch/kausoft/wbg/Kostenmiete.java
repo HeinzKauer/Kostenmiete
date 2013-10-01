@@ -7,6 +7,7 @@ import ch.kausoft.wbg.daten.Kapital;
 import ch.kausoft.wbg.daten.Mietzinsbeitrag;
 import ch.kausoft.wbg.daten.Tilgung;
 import ch.kausoft.wbg.daten.Wohnung;
+import ch.kausoft.wbg.daten.ZinsCase;
 import ch.kausoft.wbg.daten.Zinssatz;
 
 public class Kostenmiete {
@@ -64,7 +65,7 @@ public class Kostenmiete {
       Investition[] inv = datenSpeicher.getAllInvestition();
       for (int i = 0; i < inv.length; i++) {
          Investition investition = inv[i];
-         Tilgung t = new Tilgung(investition);
+         Tilgung t = new Tilgung(investition,ZinsCase.zinsIst);
          t.TilgungsPlanRechnen();
          t.listConsoloutput();
       }

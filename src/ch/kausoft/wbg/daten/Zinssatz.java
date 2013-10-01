@@ -12,6 +12,7 @@ public class Zinssatz {
     */
    double zins[] = new double[4];
 
+
    /**
     * 
     * @param abJahr

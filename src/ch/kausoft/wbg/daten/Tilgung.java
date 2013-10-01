@@ -20,7 +20,7 @@ public class Tilgung {
    double zinsBetrag;
    double amortisationsBetrag;
 
-   public Tilgung(Investition invest) {
+   public Tilgung(Investition invest, int zinsCase) {
       this.invest = invest;
       invest.tilgung = this;
       this.zinsCase = zinsCase;
@@ -28,7 +28,7 @@ public class Tilgung {
       this.jahr = invest.aktivierungsjahr;
    }
 
-   public Tilgung(Tilgung tparent) {
+   private Tilgung(Tilgung tparent) {
       this.tilgungBefore = tparent;
       tparent.tilgungNext = this;
 
