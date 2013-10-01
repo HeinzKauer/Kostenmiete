@@ -2,10 +2,14 @@ package ch.kausoft.wbg.daten;
 
 public class Tilgung {
 
-/**
-* eine Investition wird getilgt 
-*/
+	/**
+	* eine Investition wird getilgt 
+	*/
    Investition invest;
+   
+   /**
+    * Es wir eine Verkettet Liste aufgebaut 
+    */
    Tilgung tilgungBefore;
    Tilgung tilgungNext;
 

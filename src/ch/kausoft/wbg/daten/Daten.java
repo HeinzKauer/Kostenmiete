@@ -3,7 +3,7 @@ package ch.kausoft.wbg.daten;
 public class Daten {
 
   /**
-   * 
+   * Bezeichnung 
    */
   String bezeichnung;
 
