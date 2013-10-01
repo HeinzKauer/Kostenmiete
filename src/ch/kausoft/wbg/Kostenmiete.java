@@ -1,14 +1,10 @@
 package ch.kausoft.wbg;
 
-import ch.kausoft.tool.CsvReader;
 import ch.kausoft.wbg.daten.DataImporter;
 import ch.kausoft.wbg.daten.Investition;
-import ch.kausoft.wbg.daten.Kapital;
-import ch.kausoft.wbg.daten.Mietzinsbeitrag;
 import ch.kausoft.wbg.daten.Tilgung;
 import ch.kausoft.wbg.daten.Wohnung;
 import ch.kausoft.wbg.daten.ZinsCase;
-import ch.kausoft.wbg.daten.Zinssatz;
 
 public class Kostenmiete {
 

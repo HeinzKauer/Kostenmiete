@@ -141,7 +141,6 @@ public class Tilgung {
    }
 
    public Tilgung TilgungsPlanRechnen() {
-      Tilgung t = this;
 
       double beitrag = 0d;
       double resrschuld;

@@ -1,8 +1,6 @@
 package ch.kausoft.wbg;
 
 import java.util.HashMap;
-import java.util.Iterator;
-
 import ch.kausoft.wbg.daten.Investition;
 import ch.kausoft.wbg.daten.Kapital;
 import ch.kausoft.wbg.daten.Wohnung;
