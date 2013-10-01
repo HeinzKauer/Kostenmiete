@@ -8,7 +8,7 @@ public class Daten {
   String bezeichnung;
 
   /**
-   * 
+   * Beschreibung 
    */
   String beschreibung;
 
