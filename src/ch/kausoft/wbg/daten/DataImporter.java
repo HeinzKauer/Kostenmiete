@@ -14,7 +14,7 @@ public class DataImporter {
 
    public DatenSpeicher load() {
 
-      String name = "C:\\eclipse2013\\git\\kostenmiete\\src\\ch\\kausoft\\wbg\\daten\\InputDaten.csv";
+      String name = "C:\\eclipse2013\\git\\github\\Kostenmiete\\src\\ch\\kausoft\\wbg\\daten\\InputDaten.csv";
 //      String name = "..//InputDaten.csv";
       File f = new File(name);     
       String zeile;
