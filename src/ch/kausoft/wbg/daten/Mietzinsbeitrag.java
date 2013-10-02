@@ -5,7 +5,7 @@ package ch.kausoft.wbg.daten;
  * verwendet werden. Von diesem Beitrag werden die Zinskosten abgezogen und der
  * Rest wird zur Schuldamortisation verwendet.
  * 
- * Jeder Infestition hat pro jahr die Mietzinsbeitrag definiert
+ * Jeder Investition hat pro jahr die Mietzinsbeitrag definiert
  * 
  * @author Heinz
  * 

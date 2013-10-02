@@ -24,8 +24,8 @@ public class Tilgung {
       this.invest = invest;
       invest.tilgung = this;
       this.zinsCase = zinsCase;
-      this.betrag = invest.investitionZumTilgen;
-      this.jahr = invest.aktivierungsjahr;
+      this.betrag = invest.tilgungDurchAmortisation;
+      this.jahr = invest.aktivierungsJahr;
    }
 
    private Tilgung(Tilgung tparent) {
@@ -71,8 +71,8 @@ public class Tilgung {
             + (int) ((zinsBetrag + amortisationsBetrag) / 12)
             + " "
             + ((invest.lebensdauerInJahre
-                  - (this.jahr - invest.aktivierungsjahr) > 0) ? this.jahr
-                  - invest.aktivierungsjahr + 1
+                  - (this.jahr - invest.aktivierungsJahr) > 0) ? this.jahr
+                  - invest.aktivierungsJahr + 1
                   : "�berschreitung Amortisierungsdauer")
 
       );
@@ -124,7 +124,7 @@ public class Tilgung {
    }
 
    private int amortisationsjahr() {
-      return (jahr - invest.aktivierungsjahr + 1);
+      return (jahr - invest.aktivierungsJahr + 1);
    }
 
    public boolean fertig() {

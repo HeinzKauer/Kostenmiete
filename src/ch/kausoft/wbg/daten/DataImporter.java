@@ -90,12 +90,12 @@ public class DataImporter {
       } else if (d[2].equalsIgnoreCase("Investition")) {
          if (d.length >= 7) {
             try {
-               iv.aktivierungsjahr = Integer.parseInt(d[3]);
+               iv.aktivierungsJahr = Integer.parseInt(d[3]);
                iv.investitionsBetrag = Integer.parseInt(d[4]);
-               iv.investitionAusRueckstellung = Integer.parseInt(d[5]);
+               iv.tilgungAusErneuerungsFond = Integer.parseInt(d[5]);
                iv.lebensdauerInJahre = Integer.parseInt(d[6]);
-               iv.investitionZumTilgen = iv.investitionsBetrag
-                     - iv.investitionAusRueckstellung;
+               iv.tilgungDurchAmortisation = iv.investitionsBetrag
+                     - iv.tilgungAusErneuerungsFond;
             } catch (Exception e) {
                System.out
                      .println("130802-0040 Daten für Investition fehlerhaft");

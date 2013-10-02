@@ -4,6 +4,21 @@ import java.util.HashMap;
 
 /**
  * 
+ * <h1>Investitionen</h1> Eine Investition wird getätigt und dann zu einem
+ * bestimmten Zeitpunkt Aktiviert. Danach muss diese Investition Amortisiert
+ * oder abgetragen werden. Eine werterhaltende Investition sollte durch
+ * angespartes Kapital aus einem Erneuerungsfond getilt werden können. Der
+ * Wertvermehrende Anteil muss innerhalb einer Lebensdauer Amortisiert werden.
+ * 
+ * <h2>Tilgung aus dem Erneuerungs Fond</h2> Werterhaltende Massnahmen sollten
+ * zum Teil aus dem Erneuerungfond und zum Teil aus Eigenkapital Finanziert
+ * werden können.
+ * 
+ * <h2>Tilgung durch Amortiasation währen einer Lebensdauer</h2> Die Investition
+ * Wert vermehrender Massnahmen sollten innerhalb der Lebensdauer Amortisiert
+ * und getilgt werden.
+ * 
+ * 
  * 
  * @author Heinz
  * 
@@ -17,23 +32,28 @@ public class Investition extends Daten {
 	int investitionsBetrag;
 
 	/**
-	 * Ein Teil der Investition kann aus Rückstellungen getilgt werden.
+	 * Ein Teil der Investition kann aus dem Erneuerungsfond getilgt werden.
 	 */
-	int investitionAusRueckstellung;
+	int tilgungAusErneuerungsFond;
 
 	/**
-	 * Differenz investitionsBetrag - investitionAusRueckstellung
+	 * Differenz investitionsBetrag - tilgungAusErneuerungsFond
 	 */
-	int investitionZumTilgen;
+	int tilgungDurchAmortisation;
 
 	/**
 	 * Aktiviwreungsjahr
 	 */
-	int aktivierungsjahr;
+	int aktivierungsJahr;
 
 	/**
-   * 
-   */
+	 * Aktivierungs Monat / Default = Januar
+	 */
+	int aktivierungsMonat = 01;
+
+	/**
+	 * Die Lebensdauer in Jahren
+	 */
 	int lebensdauerInJahre;
 
 	/**
@@ -61,10 +81,10 @@ public class Investition extends Daten {
 		super(bezeichnung, beschreibung);
 
 		this.investitionsBetrag = investitionsBetrag;
-		this.investitionAusRueckstellung = investitionAusRueckstellung;
-		this.aktivierungsjahr = aktivierungsjahr;
+		this.tilgungAusErneuerungsFond = investitionAusRueckstellung;
+		this.aktivierungsJahr = aktivierungsjahr;
 		this.lebensdauerInJahre = lebensdauerInJahre;
-		this.investitionZumTilgen = investitionsBetrag
+		this.tilgungDurchAmortisation = investitionsBetrag
 				- investitionAusRueckstellung;
 		this.kapital = kapital;
 	}
