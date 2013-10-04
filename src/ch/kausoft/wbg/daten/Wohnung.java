@@ -4,7 +4,7 @@ public class Wohnung extends Daten {
 
    short nummer;
    short hausnummer;
-   double faeche;
+   double flaeche;
    double bewertung;
 
    public Wohnung(short nummer) {
@@ -17,7 +17,7 @@ public class Wohnung extends Daten {
       System.out.println("Wohnung " + nummer //
             + " Haus " + hausnummer //
             + bezeichnung + " // " + beschreibung //
-            + " Flaeche " + faeche //
+            + " Flaeche " + flaeche //
             + " Bewertet " + bewertung);
    }
 }

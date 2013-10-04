@@ -60,7 +60,7 @@ public class Tilgung {
 
    public void consolOut() {
 
-      System.out.println(jahr
+      System.out.println("131004-2210 "+jahr
             + " "
             + (int) betrag
             + " "
@@ -73,14 +73,12 @@ public class Tilgung {
             + ((invest.lebensdauerInJahre
                   - (this.jahr - invest.aktivierungsJahr) > 0) ? this.jahr
                   - invest.aktivierungsJahr + 1
-                  : "�berschreitung Amortisierungsdauer")
-
+                  : "Ueberschreitung Amortisierungsdauer")
       );
-
    }
 
    public void consolOutDetail(double zins, Investition invest2) {
-      System.out.println(invest2.bezeichnung + " Betrag " + betrag
+      System.out.println("131004-2217 "+invest2.bezeichnung + " Betrag " + betrag
             + " Zinskosten " + zins + " Miete / Jahr "
             + ((zinsBetrag + amortisationsBetrag)) + " Miete / Monat "
             + ((zinsBetrag + amortisationsBetrag) / 12));
@@ -90,7 +88,7 @@ public class Tilgung {
       boolean gerundet = true;
       if (gerundet) {
          System.out
-               .println(invest2.bezeichnung
+               .println("131004-1212 "+invest2.bezeichnung
                      + " Betrag " //
                      + (int) (betrag * wohnungsanteil / 100)//
                      + " (" //
@@ -103,7 +101,7 @@ public class Tilgung {
                      + ((int) ((zinsBetrag + amortisationsBetrag) / 12 * wohnungsanteil) / 100));
       } else {
          System.out
-               .println(invest2.bezeichnung
+               .println("131004-1213 "+invest2.bezeichnung
                      + " Betrag "
                      + betrag
                      * wohnungsanteil
@@ -141,46 +139,37 @@ public class Tilgung {
    }
 
    public Tilgung TilgungsPlanRechnen() {
-
       double beitrag = 0d;
       double resrschuld;
       do {
          beitrag += 1000d;
          resrschuld = TilgungsPlanRechnenIntern(beitrag);
-         // System.out.println("--->" + beitrag + "," + resrschuld);
       } while (resrschuld > 1000d);
       beitrag -= 1000d;
       do {
          beitrag += 100d;
          resrschuld = TilgungsPlanRechnenIntern(beitrag);
-         // System.out.println("--->" + beitrag + "," + resrschuld);
       } while (resrschuld > 100d);
       beitrag -= 100d;
       do {
          beitrag += 10d;
          resrschuld = TilgungsPlanRechnenIntern(beitrag);
-         // System.out.println("--->" + beitrag + "," + resrschuld);
       } while (resrschuld > 10d);
       beitrag -= 10d;
       do {
          beitrag += 1d;
          resrschuld = TilgungsPlanRechnenIntern(beitrag);
-         // System.out.println("--->" + beitrag + "," + resrschuld);
       } while (resrschuld > 1d);
       beitrag -= 1d;
       do {
          beitrag += 0.1d;
          resrschuld = TilgungsPlanRechnenIntern(beitrag);
-         // System.out.println("--->" + beitrag + "," + resrschuld);
       } while (resrschuld > 0.1d);
       beitrag -= 0.1d;
       do {
          beitrag += 0.10d;
          resrschuld = TilgungsPlanRechnenIntern(beitrag);
-         // System.out.println("--->" + beitrag + "," + resrschuld);
       } while (resrschuld > 0.01d);
-
-      // System.out.println("--->" + beitrag + "," + resrschuld);
       return this;
    }
 
@@ -199,18 +188,15 @@ public class Tilgung {
    }
 
    public void listConsoloutput() {
-      System.out.println("co --------------------------");
-
-      Tilgung l = this;
+      System.out.println("131001-2209 --------------------------");
+      Tilgung t = this;
       double zins = 0d;
       do {
-         // l.consolOut();
-         zins += l.zinsBetrag;
-         l = l.tilgungNext;
-      } while (l != null);
-
+          // t.consolOut();
+         zins += t.zinsBetrag;
+         t = t.tilgungNext;
+      } while (t != null);
       this.consolOutDetail(zins, this.invest);
-
    }
 
 }

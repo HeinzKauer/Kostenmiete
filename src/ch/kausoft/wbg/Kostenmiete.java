@@ -19,17 +19,6 @@ public class Kostenmiete {
 
    private void run() {
       datenSpeicher = loadData();
-
-      // Investition i2 = ds.getInvestition("Parketboden");
-      //
-      // Tilgung t = new Tilgung(i2).TilgungRechnen();
-      // t.listConsoloutput();
-      //
-      //
-      // Tilgung tp = new Tilgung(i2);
-      // tp.TilgungsPlanRechnen();
-      // tp.listConsoloutput();
-
       tilgungsplanRechnen();
       listInvest();
       listWohnungTilgung();
