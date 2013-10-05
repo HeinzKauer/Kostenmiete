@@ -90,7 +90,13 @@ public class Investition extends Daten {
 	}
 
 	public Zinssatz getKapitalZins(int jahr) {
-		return kapital.getKapitalZins(jahr);
+		try {
+			return kapital.getKapitalZins(jahr);
+		} catch (NullPointerException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
 	}
 
 	public Mietzinsbeitrag getMietzinsbeitrag(int jahr) {
