@@ -1,4 +1,6 @@
-package ch.kausoft.wbg.daten;
+package ch.kausoft.wbg.daten.dao;
+
+import ch.kausoft.wbg.daten.daoHelp.JahrMonat;
 
 /**
  * für die Tilgung einer Investition kann ein jährlicher Mietzinsbeitrag
@@ -15,7 +17,7 @@ public class Mietzinsbeitrag {
 	/**
 	 * Investition für diese diesen Mietzinsbeitrag gültig ist
 	 */
-	Investition invest;
+	public Investition invest;
 
 	/**
 	 * Dieser Zins und Amortisationssatz ist gültig ab diesem Jahr
@@ -50,7 +52,7 @@ public class Mietzinsbeitrag {
 	 * Ab dem definierten Jahr wird jährlich dieser Betrag verwendet um die
 	 * auflauffenden Zinsen und die Amortisation zu finanzieren.
 	 */
-	double jaehrlicherMietzinsbeitrag;
+	public double jaehrlicherMietzinsbeitrag;
 
 	/**
 	 * 

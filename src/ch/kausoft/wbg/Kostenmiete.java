@@ -2,10 +2,10 @@ package ch.kausoft.wbg;
 
 import ch.kausoft.wbg.daten.DataImporter;
 import ch.kausoft.wbg.daten.DatenSpeicher;
-import ch.kausoft.wbg.daten.Investition;
-import ch.kausoft.wbg.daten.Tilgung;
-import ch.kausoft.wbg.daten.Wohnung;
-import ch.kausoft.wbg.daten.ZinsCase;
+import ch.kausoft.wbg.daten.dao.Investition;
+import ch.kausoft.wbg.daten.dao.Tilgung;
+import ch.kausoft.wbg.daten.dao.Wohnung;
+import ch.kausoft.wbg.daten.dao.ZinsCase;
 
 public class Kostenmiete {
 

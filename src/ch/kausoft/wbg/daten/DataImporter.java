@@ -6,7 +6,11 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import ch.kausoft.wbg.daten.dao.Investition;
 import ch.kausoft.wbg.daten.dao.Kapital;
+import ch.kausoft.wbg.daten.dao.Mietzinsbeitrag;
+import ch.kausoft.wbg.daten.dao.Wohnung;
+import ch.kausoft.wbg.daten.dao.Zinssatz;
 
 /**
  * Laden der Daten.

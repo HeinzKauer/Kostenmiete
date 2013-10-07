@@ -1,4 +1,4 @@
-package ch.kausoft.wbg.daten;
+package ch.kausoft.wbg.daten.daoHelp;
 
 /**
  * Dieses Jahr Monat repräsentiert einen bestimmten Monat wobei 01 = Januar ist 

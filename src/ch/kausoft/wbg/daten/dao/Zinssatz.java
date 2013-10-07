@@ -1,4 +1,4 @@
-package ch.kausoft.wbg.daten;
+package ch.kausoft.wbg.daten.dao;
 
 /**
  * 

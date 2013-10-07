@@ -2,7 +2,6 @@ package ch.kausoft.wbg.daten.dao;
 
 import java.util.HashMap;
 
-import ch.kausoft.wbg.daten.Zinssatz;
 import ch.kausoft.wbg.daten.daoHelp.Daten;
 
 public class Kapital extends Daten {

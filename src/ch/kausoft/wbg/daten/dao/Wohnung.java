@@ -1,13 +1,13 @@
-package ch.kausoft.wbg.daten;
+package ch.kausoft.wbg.daten.dao;
 
 import ch.kausoft.wbg.daten.daoHelp.Daten;
 
 public class Wohnung extends Daten {
 
-   short nummer;
-   short hausnummer;
-   double flaeche;
-   double bewertung;
+   public short nummer;
+   public    short hausnummer;
+   public    double flaeche;
+   public    double bewertung;
 
    public Wohnung(short nummer) {
       super("", "");

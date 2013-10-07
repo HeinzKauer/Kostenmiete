@@ -1,8 +1,7 @@
-package ch.kausoft.wbg.daten;
+package ch.kausoft.wbg.daten.dao;
 
 import java.util.HashMap;
 
-import ch.kausoft.wbg.daten.dao.Kapital;
 import ch.kausoft.wbg.daten.daoHelp.Daten;
 
 /**
@@ -32,32 +31,32 @@ public class Investition extends Daten {
 	 * Ein investierter Betrag der während einer bestimmten Dauer amortisiert
 	 * und getilgt werden soll
 	 */
-	int investitionsBetrag;
+	public 	int investitionsBetrag;
 
 	/**
 	 * Ein Teil der Investition kann aus dem Erneuerungsfond getilgt werden.
 	 */
-	int tilgungAusErneuerungsFond;
+	public int tilgungAusErneuerungsFond;
 
 	/**
 	 * Differenz investitionsBetrag - tilgungAusErneuerungsFond
 	 */
-	int tilgungDurchAmortisation;
+	public 	int tilgungDurchAmortisation;
 
 	/**
 	 * Aktiviwreungsjahr
 	 */
-	int aktivierungsJahr;
+	public int aktivierungsJahr;
 
 	/**
 	 * Aktivierungs Monat / Default = Januar
 	 */
-	int aktivierungsMonat = 01;
+	public int aktivierungsMonat = 01;
 
 	/**
 	 * Die Lebensdauer in Jahren
 	 */
-	int lebensdauerInJahre;
+	public int lebensdauerInJahre;
 
 	/**
     * 
@@ -69,7 +68,7 @@ public class Investition extends Daten {
 	/**
 	 * Wird Amortisiert vom Kapital
 	 */
-	Kapital kapital;
+	public  Kapital kapital;
 
 	HashMap<Integer, Mietzinsbeitrag> mietzinsbeitrag = new HashMap<Integer, Mietzinsbeitrag>();
 
