@@ -111,6 +111,6 @@ public class Investition extends Daten {
 
 	public void addMietzinsbeitrag(Mietzinsbeitrag mietzinsbeitrag) {
 		mietzinsbeitrag.invest = this;
-		this.mietzinsbeitrag.put(mietzinsbeitrag.abJahr, mietzinsbeitrag);
+		this.mietzinsbeitrag.put(mietzinsbeitrag.getGueltigAb().getJahr() , mietzinsbeitrag);
 	}
 }
