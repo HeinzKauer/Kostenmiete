@@ -1,6 +1,7 @@
 package ch.kausoft.wbg;
 
 import ch.kausoft.wbg.daten.DataImporter;
+import ch.kausoft.wbg.daten.DatenSpeicher;
 import ch.kausoft.wbg.daten.Investition;
 import ch.kausoft.wbg.daten.Tilgung;
 import ch.kausoft.wbg.daten.Wohnung;

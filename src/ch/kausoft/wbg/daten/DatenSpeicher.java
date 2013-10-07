@@ -1,9 +1,7 @@
-package ch.kausoft.wbg;
+package ch.kausoft.wbg.daten;
 
 import java.util.HashMap;
 
-import ch.kausoft.wbg.daten.Investition;
-import ch.kausoft.wbg.daten.Wohnung;
 import ch.kausoft.wbg.daten.dao.Kapital;
 
 public class DatenSpeicher {
