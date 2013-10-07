@@ -12,25 +12,25 @@ package ch.kausoft.wbg.daten;
  */
 public class Mietzinsbeitrag {
 
-   /**
-    * Investition für diese diesen Mietzinsbeitrag gültig ist
-    */
-   public Investition invest;
+	/**
+	 * Investition für diese diesen Mietzinsbeitrag gültig ist
+	 */
+	public Investition invest;
 
-   /**
-    * Dieser Zins und Amortisationssatz ist gültig ab diesem Jahr
-    */
-   int abJahr;
+	/**
+	 * Dieser Zins und Amortisationssatz ist gültig ab diesem Jahr
+	 */
+	JahrMonat gueltigAb;
 
-   /**
-    * Ab dem definierten Jahr wird jährlich dieser Betrag verwendet um die
-    * auflauffenden Zinsen und die Amortisation zu finanzieren.
-    */
-   double jaehrlicherMietzinsbeitrag;
+	/**
+	 * Ab dem definierten Jahr wird jährlich dieser Betrag verwendet um die
+	 * auflauffenden Zinsen und die Amortisation zu finanzieren.
+	 */
+	double jaehrlicherMietzinsbeitrag;
 
-   public Mietzinsbeitrag(int abJahr, double jaehrlicherMietzinsbeitrag) {
-      this.abJahr = abJahr;
-      this.jaehrlicherMietzinsbeitrag = jaehrlicherMietzinsbeitrag;
-   }
+	public Mietzinsbeitrag(int abJahr, double jaehrlicherMietzinsbeitrag) {
+		this.gueltigAb = new JahrMonat(abJahr, 01);
+		this.jaehrlicherMietzinsbeitrag = jaehrlicherMietzinsbeitrag;
+	}
 
 }
