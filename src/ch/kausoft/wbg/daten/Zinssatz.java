@@ -11,12 +11,12 @@ public class Zinssatz {
 	/**
 	 * Dieser Zins und Amortisationssatz ist gültig ab diesem Jahr
 	 */
-	int abJahr;
+	public int abJahr;
 
 	/**
 	 * Wir haben vier verschiedene Zinssätze
 	 */
-	double zins[] = new double[4];
+	public double zins[] = new double[4];
 
 	/**
 	 * 

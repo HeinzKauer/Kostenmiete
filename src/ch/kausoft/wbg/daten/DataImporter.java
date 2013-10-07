@@ -5,7 +5,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+
 import ch.kausoft.wbg.DatenSpeicher;
+import ch.kausoft.wbg.daten.dao.Kapital;
 
 /**
  * Laden der Daten.
@@ -69,8 +71,8 @@ public class DataImporter {
 		short hausNr = Short.parseShort(d[1]);
 		short wNummer = Short.parseShort(d[2]);
 		Wohnung wohnung = ds.getWohnung(wNummer);
-		wohnung.bezeichnung = d[3];
-		wohnung.beschreibung = d[4];
+		wohnung.setBezeichnung( d[3]);
+		wohnung.setBeschreibung(d[4]);
 		wohnung.hausnummer = hausNr;
 		wohnung.flaeche = Double.parseDouble(d[5]);
 		wohnung.bewertung = Double.parseDouble(d[6]);
@@ -79,7 +81,7 @@ public class DataImporter {
 	private void parsInvestition(String[] d) {
 		Investition iv = ds.getInvestition(d[1]); // Bezeichnung
 		if (d[2].equalsIgnoreCase("Beschreibung")) {
-			iv.beschreibung = d[3];
+			iv.setBeschreibung( d[3]);
 		} else if (d[2].equalsIgnoreCase("Kapital")) {
 			iv.kapital = ds.getKapital(d[3]);
 		} else if (d[2].equalsIgnoreCase("Investition")) {
@@ -155,7 +157,7 @@ public class DataImporter {
 	private void parsKapital(String[] d) {
 		Kapital k = ds.getKapital(d[1]);
 		if (d[2].equalsIgnoreCase("Beschreibung")) {
-			k.beschreibung = d[3];
+			k.setBeschreibung( d[3]);
 		} else if (d[2].equalsIgnoreCase("Zinssatz")) {
 			if (d.length >= 8) {
 				k.addKapitalZins( //

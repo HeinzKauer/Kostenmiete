@@ -1,5 +1,7 @@
 package ch.kausoft.wbg.daten;
 
+import ch.kausoft.wbg.daten.daoHelp.Daten;
+
 public class Wohnung extends Daten {
 
    short nummer;
@@ -16,7 +18,7 @@ public class Wohnung extends Daten {
    public void list() {
       System.out.println("Wohnung " + nummer //
             + " Haus " + hausnummer //
-            + bezeichnung + " // " + beschreibung //
+            + bezeichnung + " // " + getBeschreibung() 
             + " Flaeche " + flaeche //
             + " Bewertet " + bewertung);
    }

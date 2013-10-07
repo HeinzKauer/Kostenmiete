@@ -2,6 +2,9 @@ package ch.kausoft.wbg.daten;
 
 import java.util.HashMap;
 
+import ch.kausoft.wbg.daten.dao.Kapital;
+import ch.kausoft.wbg.daten.daoHelp.Daten;
+
 /**
  * 
  * <h1>Investitionen</h1> Eine Investition wird getätigt und dann zu einem
