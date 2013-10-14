@@ -12,7 +12,7 @@ public class Kostenmiete {
    public static DatenSpeicher datenSpeicher;
 
    /**
-    * @param args
+    * @param args 
     */
    public static void main(String[] args) {
       new Kostenmiete().run();
